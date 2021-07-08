@@ -65,3 +65,4 @@ php artisan serve
 
 - Copyright © 2020 Adhi Ariyadi.
 - **Sistem Informasi Akademik Sekolah is open-sourced software licensed under the MIT license.**
+- **Thanks To <a href="https://github.com/adhiariyadi"> Adhi Ariyadi </a>**
