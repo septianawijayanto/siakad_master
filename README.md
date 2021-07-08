@@ -38,7 +38,7 @@ Web Sistem Informasi Akademik Sekolah yang dibuat oleh <a href="https://github.c
 1. **Clone Repository**
 
 ```bash
-git clone https://github.com/adhiariyadi/Sistem-Informasi-Akademik-Sekolah-Laravel.git
+git clone https://github.com/septianawijayanto/siakad_master.git
 cd Sistem-Informasi-Akademik-Sekolah-Laravel
 composer install
 npm install
