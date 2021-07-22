@@ -26,9 +26,8 @@ Web Sistem Informasi Akademik Sekolah yang dibuat berdasarkan pengembangan dari 
 
 ```bash
 git clone https://github.com/septianawijayanto/siakad_master.git
-cd Sistem-Informasi-Akademik-Sekolah-Laravel
+cd siakad_master
 composer install
-npm install
 cp .env.example .env
 ```
 
