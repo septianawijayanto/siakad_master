@@ -1,4 +1,4 @@
-@extends('template_backend.home')
+extends('template_backend.home')
 @section('heading', 'Entry Nilai Ulangan')
 @section('page')
 <li class="breadcrumb-item active">Entry Nilai Ulangan</li>

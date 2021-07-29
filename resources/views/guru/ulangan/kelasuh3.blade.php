@@ -1,7 +1,7 @@
 @extends('template_backend.home')
-@section('heading', 'Entry Nilai Ulangan')
+@section('heading', 'Entry Nilai Ulangan Harian 3')
 @section('page')
-<li class="breadcrumb-item active">Entry Nilai Ulangan</li>
+<li class="breadcrumb-item active">Entry Nilai Ulangan Harian 3</li>
 @endsection
 @section('content')
 <div class="col-md-12">
@@ -37,12 +37,7 @@
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $data[0]->rapot($val)->nama_kelas }}</td>
                 <td>
-                  <a href="{{ route('ulangan.show', Crypt::encrypt($val)) }}" class="btn btn-primary btn-sm"><i class="nav-icon fas fa-pen"></i> Entry Nilai</a>
-                  <a href="{{ url('ulangan/show/uh1', Crypt::encrypt($val)) }}" class="btn btn-primary btn-sm"><i class="nav-icon fas fa-pen"></i> UH1</a>
-                  <a href="{{ url('ulangan/show/uh2', Crypt::encrypt($val)) }}" class="btn btn-primary btn-sm"><i class="nav-icon fas fa-pen"></i> UH2</a>
-                  <a href="{{ url('ulangan/show/uh3', Crypt::encrypt($val)) }}" class="btn btn-primary btn-sm"><i class="nav-icon fas fa-pen"></i> UH3</a>
-                  <a href="{{ url('ulangan/show/uts', Crypt::encrypt($val)) }}" class="btn btn-primary btn-sm"><i class="nav-icon fas fa-pen"></i> UTS</a>
-                  <a href="{{ url('ulangan/show/uas', Crypt::encrypt($val)) }}" class="btn btn-primary btn-sm"><i class="nav-icon fas fa-pen"></i> UAS</a>
+                  <a href="{{ url('ulangan/show/uh3', Crypt::encrypt($val)) }}" class="btn btn-primary btn-sm"><i class="nav-icon fas fa-pen"></i> Entry Ulangan Harian 3</a>
                 </td>
               </tr>
               @endforeach
@@ -58,6 +53,6 @@
 <script>
   $("#NilaiGuru").addClass("active");
   $("#liNilaiGuru").addClass("menu-open");
-  $("#UlanganGuru").addClass("active");
+  $("#Ulangan3Guru").addClass("active");
 </script>
 @endsection

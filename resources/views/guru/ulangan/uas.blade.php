@@ -1,14 +1,14 @@
 @extends('template_backend.home')
-@section('heading', 'Entry Nilai Ulangan')
+@section('heading', 'Entry Nilai UAS')
 @section('page')
-<li class="breadcrumb-item active">Entry Nilai Ulangan</li>
+<li class="breadcrumb-item active">Entry Nilai UAS</li>
 @endsection
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Entry Nilai Ulangan</h3>
+            <h3 class="card-title">Entry Nilai UAS</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -75,10 +75,10 @@
                             <tr>
                                 <th class="ctr">No.</th>
                                 <th>Nama Siswa</th>
-                                <th class="ctr">ULHA 1</th>
+                                <!-- <th class="ctr">ULHA 1</th>
                                 <th class="ctr">ULHA 2</th>
                                 <th class="ctr">UTS</th>
-                                <th class="ctr">ULHA 3</th>
+                                <th class="ctr">ULHA 3</th> -->
                                 <th class="ctr">UAS</th>
                                 <th class="ctr">Aksi</th>
                             </tr>
@@ -100,7 +100,7 @@
                                         <input type="hidden" name="ulangan_id" class="ulangan_id_{{$data->id}}" value="">
                                         @endif
                                     </td>
-                                    <td class="ctr">
+                                    <td hidden class="ctr">
                                         @if ($data->ulangan($data->id) && $data->ulangan($data->id)['ulha_1'])
                                         <div class="text-center">{{ $data->ulangan($data->id)['ulha_1'] }}</div>
                                         <input type="hidden" name="ulha_1" class="ulha_1_{{$data->id}}" value="{{ $data->ulangan($data->id)['ulha_1'] }}">
@@ -108,7 +108,7 @@
                                         <input type="text" name="ulha_1" maxlength="2" onkeypress="return inputAngka(event)" style="margin: auto;" class="form-control text-center ulha_1_{{$data->id}}" autocomplete="off">
                                         @endif
                                     </td>
-                                    <td class="ctr">
+                                    <td hidden class="ctr">
                                         @if ($data->ulangan($data->id) && $data->ulangan($data->id)['ulha_2'])
                                         <div class="text-center">{{ $data->ulangan($data->id)['ulha_2'] }}</div>
                                         <input type="hidden" name="ulha_2" class="ulha_2_{{$data->id}}" value="{{ $data->ulangan($data->id)['ulha_2'] }}">
@@ -116,7 +116,7 @@
                                         <input type="text" name="ulha_2" maxlength="2" onkeypress="return inputAngka(event)" style="margin: auto;" class="form-control text-center ulha_2_{{$data->id}}" autocomplete="off">
                                         @endif
                                     </td>
-                                    <td class="ctr">
+                                    <td hidden class="ctr">
                                         @if ($data->ulangan($data->id) && $data->ulangan($data->id)['uts'])
                                         <div class="text-center">{{ $data->ulangan($data->id)['uts'] }}</div>
                                         <input type="hidden" name="uts" class="uts_{{$data->id}}" value="{{ $data->ulangan($data->id)['uts'] }}">
@@ -124,7 +124,7 @@
                                         <input type="text" name="uts" maxlength="2" onkeypress="return inputAngka(event)" style="margin: auto;" class="form-control text-center uts_{{$data->id}}" autocomplete="off">
                                         @endif
                                     </td>
-                                    <td class="ctr">
+                                    <td hidden class="ctr">
                                         @if ($data->ulangan($data->id) && $data->ulangan($data->id)['ulha_3'])
                                         <div class="text-center">{{ $data->ulangan($data->id)['ulha_3'] }}</div>
                                         <input type="hidden" name="ulha_3" class="ulha_3_{{$data->id}}" value="{{ $data->ulangan($data->id)['ulha_3'] }}">
@@ -201,6 +201,6 @@
 
     $("#NilaiGuru").addClass("active");
     $("#liNilaiGuru").addClass("menu-open");
-    $("#UlanganGuru").addClass("active");
+    $("#UASGuru").addClass("active");
 </script>
 @endsection

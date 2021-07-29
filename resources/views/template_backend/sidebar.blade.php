@@ -139,7 +139,7 @@
                         <p>Absensi Guru</p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview" id="liNilai">
+                <!-- <li class="nav-item has-treeview" id="liNilai">
                     <a href="#" class="nav-link" id="Nilai">
                         <i class="nav-icon fas fa-file-signature"></i>
                         <p>
@@ -173,7 +173,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a href="{{ route('admin.pengumuman') }}" class="nav-link" id="Pengumuman">
                         <i class="nav-icon fas fa-clipboard"></i>
@@ -208,10 +208,41 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview ml-4">
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="{{ route('ulangan.index') }}" class="nav-link" id="UlanganGuru">
                                 <i class="fas fa-file-alt nav-icon"></i>
                                 <p>Entry Nilai Ulangan</p>
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a href="{{ route('ulangan.index1') }}" class="nav-link" id="Ulangan1Guru">
+                                <i class="fas fa-file-alt nav-icon"></i>
+                                <p>Entry Nilai UH1</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('ulangan.index2') }}" class="nav-link" id="Ulangan2Guru">
+                                <i class="fas fa-file-alt nav-icon"></i>
+                                <p>Entry Nilai UH2</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('ulangan.index3') }}" class="nav-link" id="Ulangan3Guru">
+                                <i class="fas fa-file-alt nav-icon"></i>
+                                <p>Entry Nilai UH3</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('ulangan.index4') }}" class="nav-link" id="UTSGuru">
+                                <i class="fas fa-file-alt nav-icon"></i>
+                                <p>Entry Nilai UTS</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('ulangan.index5') }}" class="nav-link" id="UASGuru">
+                                <i class="fas fa-file-alt nav-icon"></i>
+                                <p>Entry Nilai UAS</p>
                             </a>
                         </li>
                         @if (

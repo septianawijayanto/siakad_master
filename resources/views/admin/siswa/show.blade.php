@@ -1,10 +1,10 @@
 @extends('template_backend.home')
 @section('heading')
-  Data Siswa {{ $kelas->nama_kelas }}
+Data Siswa {{ $kelas->nama_kelas }}
 @endsection
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('siswa.index') }}">Siswa</a></li>
-  <li class="breadcrumb-item active">{{ $kelas->nama_kelas }}</li>
+<li class="breadcrumb-item active"><a href="{{ route('siswa.index') }}">Siswa</a></li>
+<li class="breadcrumb-item active">{{ $kelas->nama_kelas }}</li>
 @endsection
 @section('content')
 <div class="col-md-12">
@@ -14,18 +14,18 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-          <table id="example1" class="table table-bordered table-striped table-hover">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Nama Siswa</th>
-                    <th>No Induk</th>
-                    <th>Foto</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($siswa as $data)
+            <table id="example1" class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Nama Siswa</th>
+                        <th>No Induk</th>
+                        <th>Foto</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($siswa as $data)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $data->nama_siswa }}</td>
@@ -46,9 +46,9 @@
                             </form>
                         </td>
                     </tr>
-                @endforeach
-            </tbody>
-          </table>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
         <!-- /.card-body -->
     </div>
@@ -57,9 +57,9 @@
 <!-- /.col -->
 @endsection
 @section('script')
-    <script>
-        $("#MasterData").addClass("active");
-        $("#liMasterData").addClass("menu-open");
-        $("#DataSiswa").addClass("active");
-    </script>
+<script>
+    $("#MasterData").addClass("active");
+    $("#liMasterData").addClass("menu-open");
+    $("#DataSiswa").addClass("active");
+</script>
 @endsection

@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/welcome', function () {
   return view('welcome');
 });
@@ -55,7 +57,23 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/absen/simpan', 'GuruController@simpan')->name('absen.simpan');
     Route::get('/jadwal/guru', 'JadwalController@guru')->name('jadwal.guru');
     Route::resource('/nilai', 'NilaiController');
+
+    //ulangan
     Route::resource('/ulangan', 'UlanganController');
+
+    Route::get('ulangan1', 'NilaiUlanganController@uh1index')->name('ulangan.index1');
+    Route::get('ulangan2', 'NilaiUlanganController@uh2index')->name('ulangan.index2');
+    Route::get('ulangan3', 'NilaiUlanganController@uh3index')->name('ulangan.index3');
+    Route::get('uts', 'NilaiUlanganController@utsindex')->name('ulangan.index4');
+    Route::get('uas', 'NilaiUlanganController@uasindex')->name('ulangan.index5');
+
+    Route::get('/ulangan/show/uh1/{id}', 'NilaiUlanganController@u1show');
+    Route::get('/ulangan/show/uh2/{id}', 'NilaiUlanganController@u2show');
+    Route::get('/ulangan/show/uh3/{id}', 'NilaiUlanganController@u3show');
+    Route::get('/ulangan/show/uts/{id}', 'NilaiUlanganController@utsshow');
+    Route::get('/ulangan/show/uas/{id}', 'NilaiUlanganController@uasshow');
+
+
     Route::resource('/sikap', 'SikapController');
     Route::get('/rapot/predikat', 'RapotController@predikat');
     Route::resource('/rapot', 'RapotController');
